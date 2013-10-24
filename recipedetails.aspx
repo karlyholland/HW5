@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>
+    <div id="wrapper">
     <form id="form1" runat="server">
     <div>
     
@@ -47,13 +48,17 @@
                 <asp:Parameter Name="recipeID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <br />
-        <a href="default.aspx">Home</a>
-        <br />
-        <a href="Recipes.aspx">View All Recipes</a>
-        <br />
-        <a href="newrecipe.aspx">Add a New Recipe</a>
-        <br />
+
+        <div id="container">
+            <div id="menu">
+                <ul id="navlist">
+                    <li><a href="./default.aspx">Home</a></li>
+                    <li><a href="./recipes.aspx">View All Recipes</a></li>
+                    <li><a href="newrecipe.aspx">Add a New Recipe</a></li>
+                </ul>
+            </div>
+            <div id="date"><asp:Label ID="lblDate" runat="server" Text=""></asp:Label></div>
+            <div id="content">
         <asp:DetailsView ID="DetailsView1" runat="server" 
             AutoGenerateRows="False" DataKeyNames="recipeID" DataSourceID="detailsDataSource" 
             Height="450px" Width="700px">
@@ -70,8 +75,13 @@
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
-    
+    </div>
+            <div id="footer">Copyright &copy;
+                <asp:Label ID="lblCopy" runat="server" Text=""></asp:Label>
+                Karly - 6K:183 Software Design &amp; Development</div>
+        </div>
     </div>
     </form>
+    </div>
 </body>
 </html>

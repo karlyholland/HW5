@@ -1,4 +1,32 @@
-﻿body { }
+﻿body {background:silver;}
 
-.deletedrecipeshighlight {color: green; font-style:italic; font-weight:bold;
+h1 {background:tan;}
+
+.deletedrecipeshighlight {color: #F08080; font-style:italic; font-weight:bold;
                           text-decoration:underline;}
+
+#container {background: silver; width: 900px; margin: 0 auto; border: solid 2px coral;
+            text-align: center;}
+
+#menu {background: silver; padding: 20px; width: 600px; float: left; text-align:left}
+
+#date {background: yellow; padding: 20px; width: 220px; float: right;}
+
+#content {background: coral; padding: 20px; clear: both;}
+
+#footer {background: silver; text-align:center;}
+
+/*center div*/
+#wrapper { margin:0 auto; width:600px; text-align: left; }
+
+/*menu list*/
+#navlist {list-style: none;padding: 0;margin: 0;}
+    #navlist li {display: inline;padding: 0;margin: 0;}
+    #navlist li:before {content: "| ";}
+    #navlist li:first-child:before {content: "";}
+
+    /*browser probs*/
+    * html #navlist li {border-left:1px solid black;padding:0 0.4em; margin:0 0.4em 0 -0.4em;}
+    * html #navlist {height:1%;}
+    * html #navlist li {display:block;float:left;}
+    * html #navlist li:first-child{border-left:0;}
