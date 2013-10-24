@@ -10,7 +10,7 @@
 <body>
     <div id="wrapper">
     <form id="form1" runat="server">
-    <div>
+    <div></div>
     
         <asp:SqlDataSource ID="detailsDataSource" runat="server" 
             ConnectionString="<%$ ConnectionStrings:csRecipes %>" 
@@ -48,11 +48,10 @@
                 <asp:Parameter Name="recipeID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-
+        <div>
+         <img src="./images/header.png" alt="Wicked Easy Recipes - Using 5 Ingredients or Less!" width:"750px"; />
+        </div>
         <div id="container">
-
-            <h1>Wicked Easy Recipes</h1>
-            <h2>Using 5 Ingredients or Less!</h2>
 
             <div id="menu">
                 <ul id="navlist">

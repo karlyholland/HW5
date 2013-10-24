@@ -11,19 +11,19 @@ Partial Class detailsview
         Response.Write(delRecipe)
         Response.Write("</span> has been deleted.")
 
-        Response.AddHeader("REFRESH", "3;URL=./states.aspx")
+        Response.AddHeader("REFRESH", "3;URL=./default.aspx")
 
         'Response.Write("This recipe has been deleted.")
 
     End Sub
     Protected Sub DetailsView1_ItemInserted(sender As Object, e As DetailsViewInsertedEventArgs) Handles DetailsView1.ItemInserted
 
-        Response.Redirect("./recipes.aspx")
+        Response.Redirect("./default.aspx")
 
     End Sub
     Protected Sub DetailsView1_ItemUpdated(sender As Object, e As DetailsViewUpdatedEventArgs) Handles DetailsView1.ItemUpdated
 
-        Response.Redirect("./recipes.aspx")
+        Response.Redirect("./default.aspx")
 
     End Sub
 
