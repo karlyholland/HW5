@@ -50,16 +50,21 @@
         </asp:SqlDataSource>
 
         <div id="container">
+
+            <h1>Wicked Easy Recipes</h1>
+            <h2>Using 5 Ingredients or Less!</h2>
+
             <div id="menu">
                 <ul id="navlist">
                     <li><a href="./default.aspx">Home</a></li>
-                    <li><a href="./recipes.aspx">View All Recipes</a></li>
-                    <li><a href="newrecipe.aspx">Add a New Recipe</a></li>
+                    <li><a href="newrecipe.aspx">New Recipe</a></li>
+                    <li><a href="./aboutus.aspx">About Us</a></li>
+                    <li><a href="./contactus.aspx">Contact</a></li>
                 </ul>
-            </div>
-            <div id="date"><asp:Label ID="lblDate" runat="server" Text=""></asp:Label></div>
-            <div id="content">
-        <asp:DetailsView ID="DetailsView1" runat="server" 
+                <br />
+        <div id="content">
+        
+            <asp:DetailsView ID="DetailsView1" runat="server" 
             AutoGenerateRows="False" DataKeyNames="recipeID" DataSourceID="detailsDataSource" 
             Height="450px" Width="700px">
             <Fields>
@@ -72,13 +77,19 @@
                 <asp:BoundField DataField="ingredient5" HeaderText="Ingredient 5" SortExpression="ingredient5" />
                 <asp:BoundField DataField="prep" HeaderText="Preparation" SortExpression="prep" />
                 <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+          
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ButtonType="Button"/>
+          
             </Fields>
         </asp:DetailsView>
+            <br />
     </div>
-            <div id="footer">Copyright &copy;
+
+            <div id="footer">
+                <br />
+                &copy;
                 <asp:Label ID="lblCopy" runat="server" Text=""></asp:Label>
-                Karly - 6K:183 Software Design &amp; Development</div>
+                6K:183 Software Design &amp; Development</div>
         </div>
     </div>
     </form>
